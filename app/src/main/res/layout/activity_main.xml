@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+<!--    wrap_content:是layout_width和layout_height的属性值之一，表示和自身内容一样的长度。-->
+<!--    match_parent:是layout_width和layout_height的属性值之一，表示和父组件一样的长度。-->
+
+    <TextView
+        android:textColor="#000000"
+        android:background="#33FF00"
+        android:gravity="center"
+        android:textSize="40sp"
+        android:text="开始选餐"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></TextView>
+
+    <LinearLayout
+        android:layout_marginLeft="30sp"
+        android:layout_marginRight="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textColor="#000000"
+            android:text="姓名："
+            android:textSize="30sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_weight="1"
+            android:hint="请输入姓名"
+            android:textSize="25sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="30sp"
+        android:layout_marginRight="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textColor="#000000"
+            android:text="性别："
+            android:textSize="30sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+
+        <RadioGroup
+            android:id="@+id/gender"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/man"
+                android:checked="true"
+                android:textSize="25sp"
+                android:text="男"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></RadioButton>
+
+            <RadioButton
+                android:id="@+id/woman"
+                android:textSize="25sp"
+                android:text="女"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></RadioButton>
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="30sp"
+        android:layout_marginRight="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textColor="#000000"
+            android:text="喜好："
+            android:textSize="30sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+
+        <CheckBox
+            android:id="@+id/peppery"
+            android:layout_gravity="center"
+            android:textSize="25sp"
+            android:text="辣"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></CheckBox>
+
+        <CheckBox
+            android:id="@+id/seafood"
+            android:layout_gravity="center"
+            android:textSize="25sp"
+            android:text="海鲜"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></CheckBox>
+
+        <CheckBox
+            android:id="@+id/acid"
+            android:layout_gravity="center"
+            android:textSize="25sp"
+            android:text="酸"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></CheckBox>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="30sp"
+        android:layout_marginRight="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:text="预算："
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+
+        <SeekBar
+            android:id="@+id/sb"
+            android:progress="0"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"></SeekBar>
+
+        <TextView
+            android:id="@+id/budget"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            android:text="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+
+        <TextView
+            android:textColor="#000000"
+            android:textSize="25sp"
+            android:text="元"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/search"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:text="搜索菜单"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"></Button>
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"></ImageView>
+
+        <Button
+            android:id="@+id/next"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:text="下一个"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"></Button>
+    </LinearLayout>
+
+</LinearLayout>
